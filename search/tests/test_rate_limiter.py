@@ -7,7 +7,6 @@ logger = logging.getLogger(__name__)
 
 
 class EmployeeViewSetTests(TestCase):
-
     def test_get_employees_success(self):
         results = []
         for i in range(10):

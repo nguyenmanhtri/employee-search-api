@@ -147,6 +147,6 @@ LOGGING = {
 }
 
 RATE_LIMIT_CONFIGS = {
-    "TIME_WINDOW": 60 * 60, # seconds
+    "TIME_WINDOW": 10,  # seconds
     "REQUEST_COUNT": 100,
 }
