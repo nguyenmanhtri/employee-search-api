@@ -1,9 +1,8 @@
-from rest_framework import serializers
-
 from search.models import Employees
+from search.serializers.serializers import DynamicFieldsModelSerializer
 
 
-class EmployeeSerializer(serializers.ModelSerializer):
+class EmployeeSerializer(DynamicFieldsModelSerializer):
     class Meta:
         model = Employees
         fields = "__all__"

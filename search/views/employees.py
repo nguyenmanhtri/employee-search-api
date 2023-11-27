@@ -20,6 +20,6 @@ class EmployeeViewSet(viewsets.ModelViewSet):
     API endpoint that fetches employee info
     """
 
-    queryset = Employees.objects.all()
+    queryset = Employees.objects.order_by("-id").all()
     serializer_class = EmployeeSerializer
     filterset_class = EmployeeFilterSet
