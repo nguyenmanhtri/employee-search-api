@@ -56,6 +56,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "app.middleware.rate_limiter.RateLimitMiddleware",
 ]
 
 ROOT_URLCONF = "app.urls"
@@ -143,4 +144,9 @@ LOGGING = {
         "handlers": ["console"],
         "level": "INFO",
     },
+}
+
+RATE_LIMIT_CONFIGS = {
+    "TIME_WINDOW": 60 * 60, # seconds
+    "REQUEST_COUNT": 100,
 }
